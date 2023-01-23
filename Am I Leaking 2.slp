@@ -1,0 +1,480 @@
+{
+    "class_id": "com-snaplogic-pipeline",
+    "class_version": 9,
+    "link_map": {
+        "link115": {
+            "dst_id": "11111111-1111-1111-1111-000000000002",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000000",
+            "src_view_id": "output0"
+        }
+    },
+    "property_map": {
+        "error": {
+            "error_behavior": {
+                "value": "none"
+            }
+        },
+        "info": {
+            "author": {
+                "value": "dshen@snaplogic.com"
+            },
+            "label": {},
+            "notes": {
+                "value": null
+            },
+            "pipeline_doc_uri": {
+                "value": null
+            },
+            "purpose": {
+                "value": null
+            }
+        },
+        "input": {},
+        "output": {
+            "11111111-1111-1111-1111-000000000002_output0": {
+                "label": {
+                    "value": "REST Post - output0"
+                },
+                "view_type": {
+                    "value": "document"
+                }
+            }
+        },
+        "settings": {
+            "error_param_table": {
+                "value": []
+            },
+            "error_pipeline": {
+                "expression": false,
+                "value": null
+            },
+            "imports": {
+                "value": []
+            },
+            "param_table": {
+                "value": [
+                    {
+                        "capture": {
+                            "value": true
+                        },
+                        "data_type": {
+                            "value": "string"
+                        },
+                        "description": {
+                            "value": null
+                        },
+                        "key": {
+                            "value": "api_key"
+                        },
+                        "required": {
+                            "value": false
+                        },
+                        "value": {
+                            "value": "724629bde438bccf11269e56c8d58131b42be89a4f2a7372d5e51e6cede8aacd"
+                        }
+                    },
+                    {
+                        "capture": {
+                            "value": true
+                        },
+                        "data_type": {
+                            "value": "string"
+                        },
+                        "description": {
+                            "value": null
+                        },
+                        "key": {
+                            "value": "api_secret"
+                        },
+                        "required": {
+                            "value": false
+                        },
+                        "value": {
+                            "value": "287586a4ae7ae41f9cd81f01cf1b4a138b9feebf1dd6a46279190b1c7708f2c0"
+                        }
+                    },
+                    {
+                        "capture": {
+                            "value": true
+                        },
+                        "data_type": {
+                            "value": "string"
+                        },
+                        "description": {
+                            "value": null
+                        },
+                        "key": {
+                            "value": "query"
+                        },
+                        "required": {
+                            "value": false
+                        },
+                        "value": {
+                            "value": "from proxy.zscaler.access where action != 'Allowed', user != 'noauth-useragent$@2349808.zscalerthree.net' select *"
+                        }
+                    },
+                    {
+                        "capture": {
+                            "value": true
+                        },
+                        "data_type": {
+                            "value": "string"
+                        },
+                        "description": {
+                            "value": null
+                        },
+                        "key": {
+                            "value": "hours_back"
+                        },
+                        "required": {
+                            "value": false
+                        },
+                        "value": {
+                            "value": "2"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "render_map": {
+        "default_snaplex": null,
+        "detail_map": {
+            "11111111-1111-1111-1111-000000000000": {
+                "error": {},
+                "grid_x_int": 2,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": ""
+            },
+            "11111111-1111-1111-1111-000000000001": {
+                "error": {},
+                "grid_x_int": 2,
+                "grid_y_int": 2,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap catagory"
+            },
+            "11111111-1111-1111-1111-000000000002": {
+                "error": {},
+                "grid_x_int": 3,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": ""
+            }
+        },
+        "pan_x_num": 0,
+        "pan_y_num": 0,
+        "scale_ratio": 1
+    },
+    "snap_map": {
+        "11111111-1111-1111-1111-000000000000": {
+            "class_id": "com-snaplogic-snaps-script-script",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000000",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "devo-query-body"
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "editable_content": {
+                        "value": "// Ensure compatibility with both JDK 7 and 8 JSR-223 Script Engines\ntry { load(\"nashorn:mozilla_compat.js\"); } catch(e) { }\ntry { load(\"https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js\"); } catch(e) { }\n// Import the interface required by the Script snap.\nimportPackage(com.snaplogic.scripting.language);\n\n// Import the serializable Java type we'll use for the output data.\nimportClass(java.util.LinkedHashMap);\n\n/**\n * Create an object that implements the methods defined by the \"ScriptHook\"\n * interface.  We'll be passing this object to the constructor for the\n * ScriptHook interface.\n */\nvar impl = {\n    /*\n     * These variables (input, output, error, log) are defined by the\n     * ExecuteScript snap when evaluating this script.\n     */\n    input : input,\n    output : output,\n    error : error,\n    log : log,\n\n    /**\n     * The \"execute()\" method is called once when the pipeline is started\n     * and allowed to process its inputs or just send data to its outputs.\n     *\n     * Exceptions are automatically caught and sent to the error view.\n     */\n    execute : function () {\n        this.log.info(\"build header\");\n\n        var api_key = $_api_key;\n        var api_secret = $_api_secret;  \n\n        var timestamp =  new Date().getTime()\n    \n        var body = {}\n        body.query = $_query\n        body.from = (timestamp / 1000) - (3600 * ($_hours_back)) \n        body.to = timestamp / 1000; \n        // Change response format to csv\n        body.mode = {}\n        body.mode.type = \"json\"\n\n        // Prepare and encrypt the signature\n        var _textohash = api_key +  JSON.stringify(body) + timestamp.toString()\n        var hash = CryptoJS.HmacSHA256(_textohash, api_secret).toString(CryptoJS.enc.Hex)\n\n        var wrapper = new LinkedHashMap()\n        wrapper[\"api_key\"] = api_key\n        wrapper[\"signature\"] = hash\n        wrapper[\"body\"] = JSON.stringify(body)\n        wrapper[\"timestamp\"] = timestamp.toString()\n        this.output.write(wrapper)\n        \n        this.log.info(\"Script executed\");\n    },\n\n    /**\n     * The \"cleanup()\" method is called after the snap has exited the execute() method\n     */\n    cleanup : function () {\n       this.log.info(\"Cleaning up\")\n    }\n};\n\n/**\n * The Script Snap will look for a ScriptHook object in the \"hook\"\n * variable.  The snap will then call the hook's \"execute\" method.\n */\nvar hook = new com.snaplogic.scripting.language.ScriptHook(impl);\n"
+                    },
+                    "executable_during_suggest": {
+                        "value": false
+                    },
+                    "execution_mode": {
+                        "value": "Execute only"
+                    },
+                    "language": {
+                        "value": "Javascript"
+                    },
+                    "script": {
+                        "expression": false,
+                        "value": null
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000001": {
+            "class_id": "com-snaplogic-snaps-transform-jsongenerator",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000001",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "JSON Generator"
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "arrayElementsAsDocuments": {
+                        "value": true
+                    },
+                    "editable_content": {
+                        "value": "{\n\"api_key\":\"724629bde438bccf11269e56c8d58131b42be89a4f2a7372d5e51e6cede8aacd\",\n\"signature\":\"595f63a7992417af5e134c53e94bffbc9e3e95ced1a2ab7c4d30f98234373762\",\n\"body\":\"{\\\"query\\\":\\\"from proxy.zscaler.access where action != 'Allowed', user != 'noauth-useragent$@2349808.zscalerthree.net' select *\\\",\\\"from\\\":1622831589.085,\\\"to\\\":1622838789.085,\\\"mode\\\":{\\\"type\\\":\\\"json\\\"}}\",\n\"timestamp\":\"1622838789085\"\n}"
+                    },
+                    "execution_mode": {
+                        "value": "Disabled"
+                    },
+                    "passThroughProp": {
+                        "value": false
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000002": {
+            "class_id": "com-snaplogic-snaps-rest-post",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000002",
+            "property_map": {
+                "account": {
+                    "account_ref": {
+                        "expression": false,
+                        "value": {}
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "REST Post"
+                    },
+                    "notes": {
+                        "value": ""
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "batchSize": {
+                        "value": null
+                    },
+                    "connTimeout": {
+                        "value": 30
+                    },
+                    "entity": {
+                        "expression": true,
+                        "value": "$body"
+                    },
+                    "executable_during_suggest": {
+                        "value": false
+                    },
+                    "execution_mode": {
+                        "value": "Execute only"
+                    },
+                    "followRedirects": {
+                        "value": true
+                    },
+                    "header": {
+                        "value": [
+                            {
+                                "headerKey": {
+                                    "expression": false,
+                                    "value": "Content-Type"
+                                },
+                                "headerValue": {
+                                    "expression": false,
+                                    "value": "application/json"
+                                }
+                            },
+                            {
+                                "headerKey": {
+                                    "expression": false,
+                                    "value": "x-logtrust-apikey"
+                                },
+                                "headerValue": {
+                                    "expression": true,
+                                    "value": "$api_key"
+                                }
+                            },
+                            {
+                                "headerKey": {
+                                    "expression": false,
+                                    "value": "x-logtrust-timestamp"
+                                },
+                                "headerValue": {
+                                    "expression": true,
+                                    "value": "$timestamp.toString()"
+                                }
+                            },
+                            {
+                                "headerKey": {
+                                    "expression": false,
+                                    "value": "x-logtrust-sign"
+                                },
+                                "headerValue": {
+                                    "expression": true,
+                                    "value": "$signature"
+                                }
+                            },
+                            {
+                                "headerKey": {
+                                    "expression": false,
+                                    "value": "Authorization"
+                                },
+                                "headerValue": {
+                                    "expression": false,
+                                    "value": "Bearer fPn7UMdOFByxUlWE7PjyTn8h2GPomayT"
+                                }
+                            }
+                        ]
+                    },
+                    "mimeType": {
+                        "expression": false,
+                        "value": "application/json"
+                    },
+                    "normalizeUri": {
+                        "value": true
+                    },
+                    "queryParams": {
+                        "value": []
+                    },
+                    "rawData": {
+                        "value": false
+                    },
+                    "responseEntityType": {
+                        "value": "DEFAULT"
+                    },
+                    "retry": {
+                        "value": 5
+                    },
+                    "retryInterval": {
+                        "value": 3
+                    },
+                    "retryPolicy": {
+                        "value": "Connection errors"
+                    },
+                    "serviceUrl": {
+                        "expression": false,
+                        "value": "https://elastic.snaplogic.com:443/api/1/rest/slsched/feed/SL-Support/2021-05/41193%20Elevated%20Security%20Memory%20Leak/Large%20Response%20Task"
+                    },
+                    "showAllHeaders": {
+                        "value": false
+                    },
+                    "timeout": {
+                        "value": 1800
+                    },
+                    "trustAllCerts": {
+                        "value": false
+                    },
+                    "uploadBodyType": {
+                        "value": "Multipart form-data"
+                    },
+                    "uploadFile": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "uploadFileKey": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "uploadFileName": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "uploadFiles": {
+                        "value": []
+                    },
+                    "uploadTransferRequestType": {
+                        "value": "Chunked transfer encoding"
+                    }
+                },
+                "view_serial": 100
+            }
+        }
+    }
+}

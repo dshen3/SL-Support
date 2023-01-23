@@ -1,0 +1,431 @@
+{
+    "class_id": "com-snaplogic-pipeline",
+    "class_version": 9,
+    "link_map": {
+        "link100": {
+            "dst_id": "11111111-1111-1111-1111-000000000002",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000000",
+            "src_view_id": "output0"
+        },
+        "link101": {
+            "dst_id": "11111111-1111-1111-1111-000000000002",
+            "dst_view_id": "input1",
+            "src_id": "11111111-1111-1111-1111-000000000001",
+            "src_view_id": "output0"
+        },
+        "link103": {
+            "dst_id": "11111111-1111-1111-1111-000000000003",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000002",
+            "src_view_id": "output0"
+        }
+    },
+    "property_map": {
+        "error": {
+            "error_behavior": {
+                "value": "none"
+            }
+        },
+        "info": {
+            "author": {
+                "value": "dshen@snaplogic.com"
+            },
+            "label": {},
+            "notes": {
+                "value": null
+            },
+            "pipeline_doc_uri": {
+                "value": null
+            },
+            "purpose": {
+                "value": null
+            }
+        },
+        "input": {
+            "11111111-1111-1111-1111-000000000001_input101": {
+                "label": {
+                    "value": "JSON Generator - input0"
+                },
+                "view_type": {
+                    "value": "document"
+                }
+            }
+        },
+        "output": {
+            "11111111-1111-1111-1111-000000000003_output0": {
+                "label": {
+                    "value": "JSON Formatter - output0"
+                },
+                "view_type": {
+                    "value": "binary"
+                }
+            }
+        },
+        "settings": {
+            "error_param_table": {
+                "value": []
+            },
+            "error_pipeline": {
+                "expression": false,
+                "value": null
+            },
+            "imports": {
+                "value": []
+            },
+            "param_table": {
+                "value": []
+            }
+        }
+    },
+    "render_map": {
+        "default_snaplex": null,
+        "detail_map": {
+            "11111111-1111-1111-1111-000000000000": {
+                "error": {},
+                "grid_x_int": 4,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap catagory"
+            },
+            "11111111-1111-1111-1111-000000000001": {
+                "error": {},
+                "grid_x_int": 4,
+                "grid_y_int": 2,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap catagory"
+            },
+            "11111111-1111-1111-1111-000000000002": {
+                "error": {},
+                "grid_x_int": 5,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {
+                    "input1": {
+                        "dx_int": 0,
+                        "dy_int": 1,
+                        "rot_int": 0
+                    }
+                },
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap catagory"
+            },
+            "11111111-1111-1111-1111-000000000003": {
+                "error": {},
+                "grid_x_int": 6,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap catagory"
+            }
+        },
+        "pan_x_num": 0,
+        "pan_y_num": 0,
+        "scale_ratio": 1
+    },
+    "snap_map": {
+        "11111111-1111-1111-1111-000000000000": {
+            "class_id": "com-snaplogic-snaps-transform-sequence",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000000",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Sequence"
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "initialValueProp": {
+                        "expression": false,
+                        "value": 1
+                    },
+                    "numberOfDocumentsProp": {
+                        "expression": false,
+                        "value": 500000
+                    },
+                    "passThroughProp": {
+                        "value": false
+                    },
+                    "stepValueProp": {
+                        "expression": false,
+                        "value": 1
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000001": {
+            "class_id": "com-snaplogic-snaps-transform-jsongenerator",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000001",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "JSON Generator"
+                    }
+                },
+                "input": {
+                    "input101": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "arrayElementsAsDocuments": {
+                        "value": true
+                    },
+                    "editable_content": {
+                        "value": "{\n            \"eventdate\" : 1622564144968,\n            \"timestamp\" : 1622544906000,\n            \"reason\" : \"Not allowed to access this file type\",\n            \"event_id\" : \"6968854617527681041\",\n            \"protocol\" : \"HTTPS\",\n            \"action\" : \"Blocked\",\n            \"rulelabel\" : null,\n            \"ruletype\" : null,\n            \"transactionsize\" : 15432,\n            \"responsesize\" : 14934,\n            \"requestsize\" : 498,\n            \"urlcategory\" : \"Server FQDN List\",\n            \"serverip\" : 1249746729,\n            \"clienttranstime\" : 1,\n            \"requestmethod\" : \"GET\",\n            \"refererurl\" : \"None\",\n            \"useragent\" : \"Microsoft BITS/7.8\",\n            \"product\" : \"NSS\",\n            \"productVersion\" : null,\n            \"location\" : \"OneMain Corporate GRE I->other\",\n            \"clientIP\" : 180587618,\n            \"deviceName\" : null,\n            \"deviceOSType\" : null,\n            \"status\" : \"403\",\n            \"user\" : \"margery.fobes@omf.com\",\n            \"url\" : \"r3---sn-vgqs7ns7.gvt1.com/edgedl/release2/update2/aiudiwycaivmz1ibncm0ppo_1.3.36.82/googleupdatesetup.exe?cms_redirect=yes&mh=ms&mip=165.225.60.211&mm=28&mn=sn-vgqs7ns7&ms=nvh&mt=1622562500&mv=m&mvi=3&pl=22&shardbypass=yes\",\n            \"vendor\" : \"Zscaler\",\n            \"hostname\" : \"r3---sn-vgqs7ns7.gvt1.com\",\n            \"clientpublicIP\" : 3233725665,\n            \"threatcategory\" : \"None\",\n            \"threatname\" : \"None\",\n            \"threatmd5\" : null,\n            \"filename\" : null,\n            \"filetype\" : \"Windows Executable (exe, exe64, src)\",\n            \"fileSubtype\" : null,\n            \"contenttype\" : \"application/octet_stream\",\n            \"appname\" : \"General Browsing\",\n            \"pagerisk\" : \"0\",\n            \"department\" : \"Consumer Finance\",\n            \"urlsupercategory\" : \"User-defined\",\n            \"appclass\" : \"General Browsing\",\n            \"dlpengine\" : \"None\",\n            \"urlclass\" : \"Bandwidth Loss\",\n            \"threatclass\" : \"None\",\n            \"dlpdictionaries\" : \"None\",\n            \"fileclass\" : \"Executables Files\",\n            \"fileScannable\" : null,\n            \"bwthrottle\" : \"NO\",\n            \"servertranstime\" : 1,\n            \"trafficredirectmethod\" : null,\n            \"ztunnelVersion\" : null,\n            \"sslinspected\" : null,\n            \"rawSource\" : \"2021-06-01 10:55:06\\treason=Not allowed to access this file type\\tevent_id=6968854617527681041\\tprotocol=HTTPS\\taction=Blocked\\ttransactionsize=15432\\tresponsesize=14934\\trequestsize=498\\turlcategory=Server FQDN List\\tserverip=74.125.159.41\\tclienttranstime=1\\trequestmethod=GET\\trefererURL=None\\tuseragent=Microsoft BITS/7.8\\tproduct=NSS\\tlocation=OneMain Corporate GRE I->other\\tClientIP=10.195.140.98\\tstatus=403\\tuser=margery.fobes@omf.com\\turl=r3---sn-vgqs7ns7.gvt1.com/edgedl/release2/update2/aiudiwycaivmz1ibncm0ppo_1.3.36.82/googleupdatesetup.exe?cms_redirect=yes&mh=ms&mip=165.225.60.211&mm=28&mn=sn-vgqs7ns7&ms=nvh&mt=1622562500&mv=m&mvi=3&pl=22&shardbypass=yes\\tvendor=Zscaler\\thostname=r3---sn-vgqs7ns7.gvt1.com\\tclientpublicIP=192.190.188.225\\tthreatcategory=None\\tthreatname=None\\tfiletype=Windows Executable (exe, exe64, src)\\tappname=General Browsing\\tpagerisk=0\\tdepartment=Consumer Finance\\turlsupercategory=User-defined\\tappclass=General Browsing\\tdlpengine=None\\turlclass=Bandwidth Loss\\tthreatclass=None\\tdlpdictionaries=None\\tfileclass=Executables Files\\tbwthrottle=NO\\tservertranstime=1\\tcontenttype=application/octet_stream\\tunscannabletype=None\\tdevicehostname=P059458\\tdeviceowner=B2097088\"\n          }"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "passThroughProp": {
+                        "value": false
+                    }
+                },
+                "view_serial": 101
+            }
+        },
+        "11111111-1111-1111-1111-000000000002": {
+            "class_id": "com-snaplogic-snaps-transform-multijoin",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000002",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Join"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "input1": {
+                        "label": {
+                            "value": "input1"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "joinPaths": {
+                        "value": [
+                            {
+                                "leftPath": {
+                                    "expression": true,
+                                    "value": "1"
+                                },
+                                "rightInputView": {
+                                    "value": "input1"
+                                },
+                                "rightPath": {
+                                    "expression": true,
+                                    "value": "1"
+                                }
+                            }
+                        ]
+                    },
+                    "joinType": {
+                        "value": "Inner"
+                    },
+                    "noMatchData": {
+                        "value": false
+                    },
+                    "nullGreater": {
+                        "value": false
+                    },
+                    "nullSafeAccess": {
+                        "value": false
+                    },
+                    "sortedStreams": {
+                        "value": "Ascending"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000003": {
+            "class_id": "com-snaplogic-snaps-transform-jsonformatter",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000003",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "JSON Formatter"
+                    }
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "settings": {
+                    "contentPath": {
+                        "value": "$"
+                    },
+                    "deriveSchemaLimit": {
+                        "value": "None"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "formatSingleDocument": {
+                        "value": false
+                    },
+                    "header": {
+                        "value": [
+                            {
+                                "expression": {
+                                    "expression": true,
+                                    "value": ""
+                                }
+                            }
+                        ]
+                    },
+                    "ignoreEmptyStream": {
+                        "value": false
+                    },
+                    "jsonLines": {
+                        "value": false
+                    },
+                    "prettyPrint": {
+                        "value": false
+                    }
+                },
+                "view_serial": 100
+            }
+        }
+    }
+}
