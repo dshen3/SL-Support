@@ -1,0 +1,31 @@
+{
+    "job_class": "PipelineJob",
+    "job_name": "Simple Pipeline Task",
+    "note": "",
+    "parameters": {
+        "enabled": false,
+        "execution_timeout": null,
+        "include_external_urls": true,
+        "job_alias": "",
+        "job_type": "standard",
+        "llfeed_token": "dz8zK1JEEl8LKyZ9vdEy0uRyoXbE9jHj",
+        "max_failures": 10,
+        "max_in_flight": 200,
+        "notification": {
+            "recipients": null
+        },
+        "pipeline_path": "Simple Pipeline",
+        "snaplex_path": "Cloud",
+        "watchdog": {
+            "instances": 1,
+            "per": "PLEX"
+        }
+    },
+    "schedule": {
+        "always_on": true
+    },
+    "trigger": {
+        "always_on": true
+    },
+    "trigger_type": "ScheduleTrigger"
+}
